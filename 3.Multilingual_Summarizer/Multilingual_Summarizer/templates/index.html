@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multilingual Text Summarizer</title>
+    <style>
+        /* ---------- Global Styles ---------- */
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* ---------- Container ---------- */
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ---------- Headings ---------- */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #f0f0f0;
+        }
+
+        /* ---------- Form Elements ---------- */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 15px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            resize: none;
+            font-size: 16px;
+            outline: none;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        button {
+            background-color: #00C897;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00a47c;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- Output Section ---------- */
+        .output {
+            margin-top: 25px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .output p {
+            line-height: 1.5;
+            font-size: 17px;
+        }
+
+        /* ---------- Responsive Design ---------- */
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+
+            textarea {
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Multilingual Text Summarizer</h1>
+        <form action="/summarize" method="POST">
+            <label for="language">Select Language:</label>
+            <select name="language" id="language">
+                <option value="en_XX">English</option>
+                <option value="fr_XX">French</option>
+                <option value="es_XX">Spanish</option>
+                <option value="hi_IN">Hindi</option>
+                <option value="de_DE">German</option>
+            </select>
+
+            <textarea name="text" rows="8" placeholder="Enter text to summarize..." required>{{ original_text or '' }}</textarea>
+            <button type="submit">Summarize</button>
+        </form>
+
+        {% if summary %}
+        <div class="output">
+            <h2>📝 Summary:</h2>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
