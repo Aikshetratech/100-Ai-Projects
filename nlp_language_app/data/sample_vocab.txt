@@ -1,0 +1,5 @@
+apple:A fruit that grows on trees
+book:A set of written pages
+cat:A small domesticated animal
+dog:A domesticated carnivorous mammal
+house:A building for humans to live in

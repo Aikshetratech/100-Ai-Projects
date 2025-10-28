@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NLP Language Learning App</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e6f0ff, #f0f6ff);
+            margin: 0;
+            padding: 20px;
+            color: #0d3b8e;
+        }
+
+        /* Headings */
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Form styling */
+        form {
+            background-color: white;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 15px;
+            resize: none;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        /* Buttons */
+        .button-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            transition: 0.2s ease;
+        }
+
+        button[name="action"][value="translate"] {
+            background-color: #32b84c;
+        }
+        button[name="action"][value="translate"]:hover {
+            background-color: #289b3f;
+        }
+
+        button[name="action"][value="info"] {
+            background-color: #007bff;
+        }
+        button[name="action"][value="info"]:hover {
+            background-color: #0063cc;
+        }
+
+        button[name="action"][value="quiz"] {
+            background-color: #ff8c00;
+        }
+        button[name="action"][value="quiz"]:hover {
+            background-color: #e57a00;
+        }
+
+        /* Output cards */
+        .output-card, .quiz-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .output-card h2, .quiz-card b {
+            color: #0d3b8e;
+            margin-bottom: 10px;
+        }
+
+        .translation-text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .definition-text, .synonym-text {
+            background-color: #f8faff;
+            border-radius: 10px;
+            padding: 8px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .quiz-card ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .quiz-card li {
+            background-color: #f8faff;
+            border-radius: 10px;
+            padding: 8px;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .quiz-card li:hover {
+            background-color: #e0f0ff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 650px) {
+            form, .output-card, .quiz-card {
+                width: 90%;
+                padding: 20px;
+            }
+
+            button {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>NLP-Powered Language Learning</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="text">Enter text or word:</label>
+            <textarea name="text" id="text" placeholder="Type here..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="lang">Choose language:</label>
+            <select name="lang" id="lang">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button type="submit" name="action" value="translate">Translate</button>
+            <button type="submit" name="action" value="info">Get Word Info</button>
+            <button type="submit" name="action" value="quiz">Generate Quiz</button>
+        </div>
+    </form>
+
+    <!-- Translation Output -->
+    {% if translation %}
+    <div class="output-card">
+        <h2>Translation:</h2>
+        <p class="translation-text">{{ translation }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Word Info Output -->
+    {% if word_info %}
+    <div class="output-card">
+        <h2>Definitions:</h2>
+        <ul>
+            {% for d in word_info.definitions %}
+            <li class="definition-text">{{ d }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Synonyms:</h2>
+        <ul>
+            {% for s in word_info.synonyms %}
+            <li class="synonym-text">{{ s }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Vocabulary Quiz -->
+    {% if quiz %}
+    <h2>Vocabulary Quiz:</h2>
+    {% for q in quiz %}
+    <div class="quiz-card">
+        <b>{{ q.word }}</b>
+        <ul>
+            {% for c in q.choices %}
+            <li>{{ c }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
