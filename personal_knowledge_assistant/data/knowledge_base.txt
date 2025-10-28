@@ -1,0 +1,142 @@
+Python is a high-level programming language used for web development, data science, automation, and more.
+FAISS is a library for efficient similarity search and clustering of dense vectors.
+Machine learning allows computers to learn patterns from data without explicit programming.
+Artificial intelligence is the simulation of human intelligence processes by machines.
+Deep learning is a subset of machine learning that uses neural networks with many layers.
+The capital of France is Paris.
+The capital of India is New Delhi.
+SQL is a standard language for managing and querying relational databases.
+NoSQL databases are non-relational databases designed for scalability and flexibility.
+Linux is an open-source operating system widely used for servers and development.
+Windows is a popular operating system developed by Microsoft for personal computers.
+Git is a version control system that tracks changes in source code.
+GitHub is a platform for hosting Git repositories and collaborating on code projects.
+HTTP stands for Hypertext Transfer Protocol and is the foundation of data communication on the web.
+HTTPS is the secure version of HTTP using encryption.
+HTML stands for HyperText Markup Language, used to create web pages.
+CSS stands for Cascading Style Sheets, used for styling web pages.
+JavaScript is a programming language used to make web pages interactive.
+React is a JavaScript library for building user interfaces.
+Node.js is a runtime environment that allows executing JavaScript on the server.
+REST API is an architectural style for designing networked applications.
+GraphQL is a query language for APIs and a runtime for executing queries.
+Docker is a platform for developing, shipping, and running applications in containers.
+Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
+Neural networks are computing systems inspired by the human brain.
+Data science involves extracting insights from structured and unstructured data.
+Pandas is a Python library used for data manipulation and analysis.
+NumPy is a Python library used for numerical computing and handling arrays.
+Matplotlib is a Python library used for data visualization.
+Seaborn is a Python library for statistical data visualization built on top of Matplotlib.
+TensorFlow is an open-source library for deep learning and machine learning.
+PyTorch is another popular deep learning framework for Python.
+Artificial neural networks consist of layers of interconnected nodes that process data.
+Reinforcement learning is a type of machine learning where agents learn by interacting with an environment.
+Natural language processing is a field of AI that focuses on interaction between computers and human language.
+Supervised learning is a type of machine learning where models are trained on labeled data.
+Unsupervised learning is a type of machine learning that finds patterns in unlabeled data.
+Classification is a supervised learning task where outputs are categories.
+Regression is a supervised learning task where outputs are continuous values.
+Clustering is an unsupervised learning task that groups similar data points together.
+Support Vector Machines are a type of supervised learning algorithm used for classification and regression.
+Decision trees are models that use tree-like structures to make decisions based on data features.
+Random forests are ensembles of decision trees used to improve predictive performance.
+Gradient boosting is a machine learning technique for regression and classification problems.
+Python’s for loop is used to iterate over sequences like lists and strings.
+Python’s while loop is used to execute a block of code as long as a condition is true.
+Functions in Python are defined using the def keyword.
+Classes in Python are defined using the class keyword and are used for object-oriented programming.
+Inheritance allows a class to acquire properties and methods from another class.
+Encapsulation is a concept of hiding internal details of an object in OOP.
+Polymorphism allows objects to take many forms in OOP.
+Regular expressions are patterns used to match strings in text processing.
+APIs allow applications to communicate with each other programmatically.
+JSON is a lightweight data-interchange format.
+CSV stands for Comma-Separated Values, a format for tabular data.
+Encryption is the process of encoding data to prevent unauthorized access.
+Decryption is the process of decoding encrypted data.
+Cybersecurity is the practice of protecting systems, networks, and data from cyber attacks.
+Cloud computing provides on-demand access to computing resources over the internet.
+AWS, Azure, and Google Cloud are popular cloud service providers.
+Big data refers to datasets that are too large or complex for traditional data processing tools.
+Data visualization helps communicate insights from data through charts and graphs.
+Machine learning pipelines automate data preprocessing, model training, and evaluation.
+Feature engineering is the process of selecting and transforming variables for machine learning.
+Overfitting occurs when a model performs well on training data but poorly on unseen data.
+Underfitting occurs when a model is too simple to capture underlying patterns in data.
+Cross-validation is a technique for assessing model performance on unseen data.
+Hyperparameter tuning involves optimizing parameters that control the learning process.
+Gradient descent is an optimization algorithm used to minimize the loss function.
+Learning rate controls the step size during gradient descent.
+Batch size is the number of samples processed before the model updates weights.
+Epoch is one complete pass through the training dataset.
+Convolutional neural networks (CNNs) are used for image recognition and computer vision.
+Recurrent neural networks (RNNs) are used for sequential data like time series or text.
+Long Short-Term Memory (LSTM) is a type of RNN designed to remember long-term dependencies.
+Activation functions introduce non-linearity in neural networks, e.g., ReLU, Sigmoid, Tanh.
+Dropout is a regularization technique to prevent overfitting in neural networks.
+Backpropagation is the process of computing gradients for weight updates in neural networks.
+Data cleaning involves removing or correcting errors in raw data.
+Data normalization scales features to a similar range.
+Data augmentation artificially increases the size of a dataset by transforming existing data.
+Feature scaling improves the performance of machine learning algorithms.
+Exploratory data analysis (EDA) is used to summarize main characteristics of data.
+Python’s scikit-learn library provides tools for machine learning and data preprocessing.
+Python’s Keras library is a high-level API for building deep learning models.
+Python’s OpenCV library is used for computer vision applications.
+Python’s BeautifulSoup library is used for web scraping.
+Linux commands: ls, cd, mkdir, rm, cp, mv, touch, nano, vim.
+Linux process management: ps, top, kill, htop.
+Linux networking commands: ifconfig, ping, netstat, traceroute.
+Windows Command Prompt: dir, cd, copy, move, del, cls.
+Windows PowerShell commands: Get-Process, Get-Service, Get-ChildItem.
+IP address is a unique identifier for devices on a network.
+Subnet mask defines the network portion of an IP address.
+DNS translates domain names into IP addresses.
+TCP/IP is the protocol suite for data communication over the internet.
+HTTP status codes indicate the result of web requests, e.g., 200 OK, 404 Not Found.
+SSL/TLS encrypts data transmitted over the internet.
+Firewall protects networks by controlling incoming and outgoing traffic.
+VPN (Virtual Private Network) secures network connections over public networks.
+Python exception handling uses try, except, else, finally blocks.
+Python lists, tuples, sets, and dictionaries are fundamental data structures.
+Python list comprehensions provide a concise way to create lists.
+Python generators allow lazy evaluation of sequences.
+Python decorators modify functions or classes dynamically.
+Python context managers simplify resource management using with statements.
+Python multithreading allows concurrent execution of threads.
+Python multiprocessing allows parallel execution using multiple CPU cores.
+Object-oriented programming (OOP) is a paradigm based on objects and classes.
+Functional programming emphasizes pure functions and immutability.
+Agile methodology is an iterative approach to software development.
+Scrum is an Agile framework with sprints, standups, and backlogs.
+Kanban is a visual workflow management system.
+CI/CD automates building, testing, and deployment of software.
+Docker images contain all necessary components to run an application.
+Kubernetes manages containerized applications across clusters.
+Virtual machines (VMs) emulate a full operating system on hardware.
+Serverless computing runs code without managing servers.
+Edge computing processes data closer to the source devices.
+Big-O notation describes the complexity of algorithms.
+Sorting algorithms include Bubble Sort, Merge Sort, Quick Sort, and Heap Sort.
+Search algorithms include Linear Search, Binary Search, and Hashing.
+Graph algorithms include BFS, DFS, Dijkstra, and A*.
+Data structures include arrays, linked lists, stacks, queues, hash tables, and trees.
+Blockchain is a decentralized ledger for secure transactions.
+Bitcoin is a cryptocurrency based on blockchain technology.
+Ethereum is a blockchain platform with smart contracts.
+Smart contracts are self-executing contracts stored on a blockchain.
+IoT (Internet of Things) connects devices to collect and exchange data.
+Robotics involves designing and programming machines to perform tasks.
+3D printing creates physical objects from digital models.
+Augmented reality overlays digital content onto the real world.
+Virtual reality immerses users in a fully digital environment.
+Quantum computing uses quantum mechanics for computation.
+Python’s NumPy library provides mathematical functions and array operations.
+Python’s Pandas library provides DataFrame structures for data analysis.
+Python’s Matplotlib library provides plotting and visualization capabilities.
+Python’s Seaborn library is used for statistical visualization.
+Python’s SciPy library provides scientific computing tools.
+Python’s Statsmodels library is used for statistical modeling.
+Python’s Requests library is used for making HTTP requests.
+Python’s Selenium library is used for browser automation.
