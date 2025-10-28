@@ -1,0 +1,100 @@
+1. The Earth revolves around the Sun once every 365.25 days.
+2. Water boils at 100°C under standard atmospheric pressure.
+3. The human body is composed of approximately 60% water.
+4. Python is a widely used high-level programming language.
+5. Artificial Intelligence aims to simulate human intelligence in machines.
+6. Machine learning allows computers to learn patterns from data.
+7. Deep learning is a subset of machine learning based on neural networks.
+8. The speed of light is approximately 299,792 kilometers per second.
+9. Gravity is the force that attracts objects toward the center of the Earth.
+10. The capital of France is Paris.
+11. Photosynthesis is the process by which plants make their food using sunlight.
+12. The chemical symbol for gold is Au.
+13. The Great Wall of China is visible from space only under specific conditions.
+14. The human heart has four chambers.
+15. The atomic number of carbon is 6.
+16. FAISS is a library for fast similarity search and clustering of dense vectors.
+17. The Internet was invented in the late 20th century.
+18. HTML stands for HyperText Markup Language.
+19. The Moon orbits the Earth approximately every 27.3 days.
+20. The largest ocean on Earth is the Pacific Ocean.
+21. Newton formulated the three laws of motion.
+22. The Amazon rainforest is the largest tropical rainforest in the world.
+23. The currency of Japan is the Yen.
+24. Electrons are negatively charged subatomic particles.
+25. Isaac Newton also developed the concept of universal gravitation.
+26. The Eiffel Tower is located in Paris, France.
+27. DNA stands for Deoxyribonucleic Acid.
+28. The Sun is a medium-sized star at the center of our solar system.
+29. The smallest unit of life is a cell.
+30. Humans have 206 bones in their bodies.
+31. The brain controls all voluntary and involuntary actions in humans.
+32. Albert Einstein proposed the theory of relativity.
+33. Energy cannot be created or destroyed, only transformed.
+34. The process of water turning into vapor is called evaporation.
+35. The human eye has a retina that detects light.
+36. The largest desert in the world is the Sahara.
+37. The boiling point of water decreases with altitude.
+38. JavaScript is used to add interactivity to web pages.
+39. The Milky Way is the galaxy that contains our solar system.
+40. Photosynthesis releases oxygen as a by-product.
+41. Sound travels faster in water than in air.
+42. The human brain consists of about 86 billion neurons.
+43. The mitochondrion is the powerhouse of the cell.
+44. Binary code uses only 0s and 1s to represent data.
+45. The speed of sound in air is about 343 meters per second.
+46. The Statue of Liberty is located in New York Harbor.
+47. The Earth’s atmosphere is composed mainly of nitrogen and oxygen.
+48. The capital city of India is New Delhi.
+49. Africa is the second largest continent by land area.
+50. The Taj Mahal was built by Mughal emperor Shah Jahan.
+51. The longest river in the world is the Nile.
+52. The freezing point of water is 0°C.
+53. Hydrogen is the lightest element in the periodic table.
+54. Google was founded in 1998 by Larry Page and Sergey Brin.
+55. The CPU is the brain of a computer.
+56. Software is a set of instructions that tell a computer what to do.
+57. The binary number system is base 2.
+58. An octopus has three hearts.
+59. The ozone layer protects Earth from harmful ultraviolet radiation.
+60. The first man to walk on the Moon was Neil Armstrong in 1969.
+61. The periodic table organizes elements by atomic number.
+62. Carbon dioxide is a greenhouse gas.
+63. The human lungs are responsible for gas exchange.
+64. Antarctica is the coldest place on Earth.
+65. A leap year has 366 days.
+66. The study of rocks is called geology.
+67. The human skeleton supports and protects internal organs.
+68. Renewable energy sources include solar, wind, and hydro power.
+69. The Python library NumPy is used for numerical computing.
+70. Pandas is a Python library for data manipulation and analysis.
+71. A solar eclipse occurs when the Moon passes between the Earth and the Sun.
+72. Black holes have gravitational pulls so strong that even light cannot escape.
+73. Water covers about 71% of the Earth's surface.
+74. The brain’s left hemisphere controls the right side of the body.
+75. Cloud computing allows access to computing resources over the internet.
+76. The primary colors are red, blue, and yellow.
+77. The atomic number of oxygen is 8.
+78. The human ear helps maintain balance as well as hearing.
+79. Photosynthesis takes place in the chloroplasts of plant cells.
+80. A byte consists of eight bits.
+81. Mars is often called the Red Planet.
+82. The binary representation of the number 5 is 101.
+83. The World Wide Web was invented by Tim Berners-Lee.
+84. Lightning is a discharge of static electricity in the atmosphere.
+85. The Sun’s energy is produced through nuclear fusion.
+86. The main ingredient in glass is silica (sand).
+87. A prism separates white light into its component colors.
+88. Machine learning models improve with more training data.
+89. The Earth’s axis is tilted at approximately 23.5 degrees.
+90. Oceans regulate Earth’s climate by absorbing heat.
+91. The human digestive system breaks down food into nutrients.
+92. The lungs exchange oxygen and carbon dioxide.
+93. Artificial intelligence can be categorized as narrow or general AI.
+94. The human skin is the body’s largest organ.
+95. A rainbow is caused by refraction, dispersion, and reflection of light.
+96. The Internet of Things connects physical devices through the internet.
+97. Quantum computing uses qubits instead of classical bits.
+98. Electric current is measured in amperes.
+99. The moon’s gravity causes ocean tides on Earth.
+100. Data science combines statistics, programming, and domain knowledge.
