@@ -1,0 +1,6 @@
+newspaper3k
+googlesearch-python
+feedparser
+pandas
+textblob
+lxml[html_clean]
