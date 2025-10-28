@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🧠 Personalized Grammar Corrector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #e1f5fe);
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            background: #ffffffcc;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1565c0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        p b {
+            color: #1565c0; /* Bold instructions highlighted */
+            font-weight: 700;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 18px;
+            font-size: 1rem;
+            border-radius: 12px;
+            border: 1px solid #bbb;
+            resize: none;
+            min-height: 140px;
+            outline: none;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #1565c0;
+            box-shadow: 0 0 12px rgba(21, 101, 192, 0.25);
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        #correctBtn {
+            background: linear-gradient(135deg, #42a5f5, #1e88e5);
+            color: #fff;
+        }
+
+        #correctBtn:hover {
+            background: linear-gradient(135deg, #1e88e5, #1565c0);
+            transform: translateY(-2px);
+        }
+
+        #clearBtn {
+            background: #b0bec5;
+            color: #fff;
+        }
+
+        #clearBtn:hover {
+            background: #90a4ae;
+            transform: translateY(-2px);
+        }
+
+        .output-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 12px;
+            border-left: 6px solid #1565c0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .output-box h3 {
+            margin-bottom: 12px;
+            color: #1565c0;
+        }
+
+        #status {
+            text-align: right;
+            color: #666;
+            margin-top: 12px;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Personalized Grammar Corrector</h1>
+        <p>Type or paste text, then click <b>Correct</b>. The tool <b>learns your common mistakes automatically</b>.</p>
+
+        <textarea id="inputText" placeholder="Type your text here...">She go to school everyday.</textarea>
+        <div class="btn-group">
+            <button id="correctBtn">Correct ✅</button>
+            <button id="clearBtn">Clear ✖️</button>
+        </div>
+        <div id="status">Ready</div>
+
+        <div class="output-box">
+            <h3>✅ Corrected Sentence:</h3>
+            <div id="correctedText" style="white-space: pre-wrap;"></div>
+        </div>
+
+        <div class="output-box">
+            <h3>✨ Personalized Sentence (Pre-model):</h3>
+            <div id="personalizedText" style="white-space: pre-wrap;"></div>
+        </div>
+
+        <footer>
+            Built with 💙 using Flask + Transformers<br>
+            <small>Personalized English Grammar Correction Tool</small>
+        </footer>
+    </div>
+
+    <script>
+        const correctBtn = document.getElementById("correctBtn");
+        const clearBtn = document.getElementById("clearBtn");
+        const inputText = document.getElementById("inputText");
+        const correctedText = document.getElementById("correctedText");
+        const personalizedText = document.getElementById("personalizedText");
+        const status = document.getElementById("status");
+
+        correctBtn.addEventListener("click", async () => {
+            const text = inputText.value.trim();
+            if (!text) return;
+            status.textContent = "⏳ Correcting...";
+            correctBtn.disabled = true;
+
+            try {
+                const res = await fetch("/api/correct", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text })
+                });
+
+                const data = await res.json();
+                if (res.ok) {
+                    correctedText.textContent = data.corrected;
+                    personalizedText.textContent = data.personalized;
+                    status.textContent = "✅ Done!";
+                } else {
+                    correctedText.textContent = "Error: " + data.error;
+                    status.textContent = "⚠️ Error";
+                }
+            } catch (err) {
+                correctedText.textContent = "Error: " + err.message;
+                status.textContent = "❌ Failed";
+            } finally {
+                correctBtn.disabled = false;
+            }
+        });
+
+        clearBtn.addEventListener("click", () => {
+            inputText.value = "";
+            correctedText.textContent = "";
+            personalizedText.textContent = "";
+            status.textContent = "Ready";
+        });
+    </script>
+</body>
+</html>
